@@ -1,0 +1,22 @@
+.tab-item-container {
+  height: 40px;
+}
+
+.tab-btn {
+  border-width: 0px;
+  height: 40px;
+  margin-left: 10px;
+  border-radius: 8px;
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Roboto';
+}
+
+.active-tab {
+  text-decoration: underline;
+  text-decoration-color: burlywood;
+  text-decoration-thickness: 4px;
+  text-underline-position: below;
+  color: burlywood;
+}
