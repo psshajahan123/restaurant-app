@@ -1,11 +1,10 @@
 import {Component} from 'react'
 
-import {AiOutlineShoppingCart} from 'react-icons/ai'
-
 import Loader from 'react-loader-spinner'
 
 import TabItem from '../TabItem'
 import DishItem from '../DishItem'
+import Header from '../Header'
 
 import './index.css'
 
@@ -124,16 +123,10 @@ class RestaurantApp extends Component {
     const {restaurantDetails, isLoading, totalQuantity} = this.state
     return (
       <div className="app-container">
-        <div className="header-section">
-          <h1 className="restaurant-name">
-            {restaurantDetails.restaurantName}
-          </h1>
-          <div className="cart-logo-container">
-            <p className="my-orders-text">My Orders</p>
-            <AiOutlineShoppingCart className="cart-icon" />
-            <p>{totalQuantity}</p>
-          </div>
-        </div>
+        <Header
+          restaurantDetails={restaurantDetails}
+          totalQuantity={totalQuantity}
+        />
         {isLoading ? this.renderLoader() : this.renderContent()}
       </div>
     )
